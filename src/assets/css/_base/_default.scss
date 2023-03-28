@@ -1,0 +1,364 @@
+.grid {
+    margin: 0 auto;
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(4,100px);
+    grid-auto-rows: 100px;
+    gap: 40px;
+
+    div {
+        border-radius: 50%;
+    }
+    .prime-1 {
+        background-color: $prime-1;
+    }
+    .prime-2 {
+        background-color: $prime-2;
+    }
+    .prime-3 {
+        background-color: $prime-3;
+    }
+    .prime-4 {
+        background-color: $prime-4;
+    }
+    .pr-1-light-1 {
+        background-color: $pr-1-light-1;
+    }
+    .pr-1-light-2 {
+        background-color: $pr-1-light-2;
+    }
+    .pr-1-light-3 {
+        background-color: $pr-1-light-3;
+    }
+    .pr-1-dark-1 {
+        background-color: $pr-1-dark-1;
+    }
+    .pr-1-dark-2 {
+        background-color: $pr-1-dark-2;
+    }
+    .pr-1-dark-3 {
+        background-color: $pr-1-dark-3;
+    }
+
+
+    .pr-2-light-1 {
+        background-color: $pr-2-light-1;
+    }
+    .pr-2-light-2 {
+        background-color: $pr-2-light-2;
+    }
+    .pr-2-light-3 {
+        background-color: $pr-2-light-3;
+    }
+    .pr-2-dark-1 {
+        background-color: $pr-2-dark-1;
+    }
+    .pr-2-dark-2 {
+        background-color: $pr-2-dark-2;
+    }
+    .pr-2-dark-3 {
+        background-color: $pr-2-dark-3;
+    }
+
+    .pr-3-light-1 {
+        background-color: $pr-3-light-1;
+    }
+    .pr-3-light-2 {
+        background-color: $pr-3-light-2;
+    }
+    .pr-3-light-3 {
+        background-color: $pr-3-light-3;
+    }
+    .pr-3-dark-1 {
+        background-color: $pr-3-dark-1;
+    }
+    .pr-3-dark-2 {
+        background-color: $pr-3-dark-2;
+    }
+    .pr-3-dark-3 {
+        background-color: $pr-3-dark-3;
+    }
+
+    .pr-4-light-1 {
+        background-color: $pr-4-light-1;
+    }
+    .pr-4-light-2 {
+        background-color: $pr-4-light-2;
+    }
+    .pr-4-light-3 {
+        background-color: $pr-4-light-3;
+    }
+    .pr-4-dark-1 {
+        background-color: $pr-4-dark-1;
+    }
+    .pr-4-dark-2 {
+        background-color: $pr-4-dark-2;
+    }
+    .pr-4-dark-3 {
+        background-color: $pr-4-dark-3;
+    }
+}
+
+// headings
+h1 {
+	@include heading(35px,$pr-4-dark-3,$font1-bold);
+}
+h2 {
+	 @include heading(33px,$pr-4-dark-2);
+}
+h3 {
+  //  font-family: 'Poppins Medium' 'Poppins SemiBold';
+	 @include heading(27px,$pr-4-dark-3);
+}
+h4 {
+	 @include heading(22px,$pr-4-dark-3);
+}
+h5 {
+	 @include heading(17px,$pr-4-dark-3);
+}
+h6 {
+	 @include heading(15px,$pr-4-dark-3);
+}
+// texts
+p {
+  @include text(14px,$font1-regular);
+}
+.subtitle {
+	@include text(20px,$font1-medium);
+ }
+ blockquote {
+	@include text(17px,$font1-regular,$pr-1-dark-1);
+	background-color: $pr-1-light-3;
+	border-left: solid 2px $prime-1;
+	padding: 15px 35px;
+}
+// lists
+ul {
+  list-style-type: none;
+}
+li {
+  @include text(15px,$font1-medium);
+  position: relative;
+  display: flex;
+  align-items: center;
+  &::after {
+	  content: "";
+	  display: block;
+	  width: 4px;
+	  height: 7px;
+	  border-bottom: solid 2px #fff;
+	  border-right: solid 2px #fff;
+	  transform: rotate(45deg);
+	  position: absolute;
+	  left: -16px;
+	  top: 7px;
+  }
+  &::before {
+	  content: "";
+	  display: block;
+	  width: 12px;
+	  height: 12px;
+	  border-radius: 50%;
+	  background-color: $prime-1;
+	  position: absolute;
+	  left: -20px;
+  }
+}
+
+// input elements
+input[type="text"], .form-select {
+  width: 320px;
+  height: 50px;
+  @include text(13px,$font1-regular,$pr-4-dark-1);
+  background-color: #f5f9f9;
+  border: 1px solid $pr-4-light-1;
+  box-sizing: border-box;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  &:hover {
+	  background-color: #fff;
+	  cursor: pointer;
+  }
+}
+input[type="text"] {
+  padding: 20px;
+  &:active {
+	  border: 1px solid $prime-1;
+	  background-color: #fff;
+	  box-shadow: inset 0 0 2.5px $pr-1-light-1;
+  }
+  	&:focus-visible {
+		outline: none;
+		border: 1px solid #03a9f4;
+		background-color: #fff;
+		box-shadow: inset 0 0 2.5px #68cbf8;
+	}
+}
+.form-select {
+  padding: 0 15px;
+  &:focus {
+	  border: 1px solid $prime-1;
+	  background-color: #fff;
+	  box-shadow: inset 0 0 2.5px $pr-1-light-1;
+  }
+}
+.pages {
+	margin-bottom: 20px;
+	width: 351px;
+	display: flex;
+	background-color: #f5f9f9;
+	border: 1px solid $pr-4-light-1;
+	border-radius: 3px;
+}
+.pages input{
+	width: 257px;
+	height: 48px;
+	color: $pr-4-dark-1;
+	box-sizing: border-box;
+	text-align: center;
+	background-color: rgba(255,255,255,0);
+	border: none;
+	&:focus-visible {
+		outline: none;
+	}
+}
+.pages button {
+	width: 47px;
+	height: 48px;
+	background-color: #fff;
+	box-sizing: border-box;
+	border-radius: 3px;
+	border: none;
+}
+.pages button:first-of-type {
+	border-right: 1px solid $pr-4-light-1;
+}
+.pages button:last-of-type {
+	border-left: 1px solid $pr-4-light-1;
+}
+input.success {
+	background-color: #fff;
+	border: 1px solid #09a912;
+	&::placeholder {
+		color: #09a912;
+	}
+	&:active {
+		border: #09a912 1px solid;
+		box-shadow: none;
+	}
+}
+input.no-success {
+	border: 1px solid $prime-2;
+	background-color: #fff;
+	&::placeholder {
+		color: $prime-2;
+	}
+	&:active {
+		border: $prime-2 1px solid;
+		box-shadow: none;
+	}
+}
+.input-group-text {
+	background: none;
+	border: none;
+}
+input[type=text] {
+	background: none;
+	border: none;
+}
+.btn1 {
+	@include btn(220px,$prime-2); 
+	text-transform: uppercase;
+	&:hover {
+		@extend .btn1-hover;
+		@extend .hover;
+	}
+}
+.btn2 {
+	@include btn(280px,$prime-1);
+		&:hover {
+			@extend .btn23-hover;
+			@extend .hover;
+	}
+}
+.btn3 {
+	@include btn(201px,$prime-1);
+		&:hover {
+			@extend .btn23-hover;
+			@extend .hover;
+	}
+}
+.btn4 {
+	@include btn(220px,#fff,$prime-2,1px solid $prime-2);
+	text-transform: uppercase;
+		&:hover {
+			@extend .btn4-hover;
+			@extend .hover;
+	}
+}
+.btn5 {
+	@include btn(201px,#fff,$prime-1,1px solid $prime-1);
+		&:hover {
+			@extend .btn5-hover;
+			@extend .hover;
+	}
+}
+button:disabled {
+	@extend .disabled;
+}
+
+.btn1-2 {
+	@include btn2(150px,$prime-2);
+	text-transform: uppercase;
+	&:hover {
+		@extend .btn1-hover;
+		@extend .hover;
+	}
+}
+.btn2-2 {
+	@include btn2(170px,$prime-1);
+	&:hover {
+		@extend .btn23-hover;
+		@extend .hover;
+	}
+}
+.btn3-2 {
+	@include btn2(150px,$prime-1);
+	&:hover {
+		@extend .btn23-hover;
+		@extend .hover;
+	}
+}
+.btn4-2 {
+	@include btn2(150px,#fff,$prime-2,1px solid $prime-2);
+	&:hover {
+		@extend .btn4-hover;
+		@extend .hover;
+	}
+}
+.btn5-2 {
+	@include btn2(150px,#fff,$prime-1,1px solid $prime-1);
+	&:hover {
+		@extend .btn5-hover;
+		@extend .hover;
+	}
+}
+.info-popup {
+	margin-top: 20px;
+	@include text(13px,$font1-light);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 25px;
+	box-sizing: border-box;
+	width: 320px;
+	height: 169px;
+	border-radius: 3px;
+	background-color: #ffffff;
+	border: 1px solid $pr-4-light-1;
+}
+.social {
+	font-size: 15px;
+	color: $pr-4-light-1;
+	text-align: center;
+}

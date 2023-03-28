@@ -1,0 +1,50 @@
+@mixin heading($size,$color,$font:$font1-medium) {
+	font-family: $font;
+	font-size: $size;
+	color: $color;
+}
+@mixin text($size,$font,$color:$pr-4-dark-1) {
+	font-size: $size;
+	font-family: $font;
+	color: $color;
+}
+@mixin btn($width,$bg-color,$color:#fff,$border:none) {
+	width: $width;
+	background-color: $bg-color;
+	border: $border;
+	color: $color;
+	height: 50px;
+	border-radius: 3px;
+}
+@mixin btn2($width,$bg-color,$color:#fff,$border:none) {
+	width: $width;
+	background-color: $bg-color;
+	border: $border;
+	color: $color;
+	height: 40px;
+	border-radius: 3px;
+}
+.disabled {
+	background-color: $pr-4-light-2;
+	border: none;
+	color: #fff;
+}
+.hover {
+	cursor: pointer;
+}
+.btn1-hover {
+	background-color: $pr-2-light-1;
+}
+.btn23-hover {
+	background-color: $pr-1-light-2;
+}
+.btn4-hover {
+	background-color: $pr-2-light-1;
+	border: none;
+	color: #fff;
+}
+.btn5-hover {
+	background-color: $pr-1-light-2;
+	border: none;
+	color: #fff;
+}
